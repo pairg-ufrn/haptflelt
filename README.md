@@ -18,7 +18,7 @@ O projeto tem duas partes:
 - Comando secreto (toque simultâneo nas 4 áreas) para recalibrar a posição neutra a qualquer momento.
 - Feedback vibratório em motores posicionados no cinto, acionado por comandos recebidos do PC.
 - Indicadores visuais (LED RGB) e sonoros (buzzer) de status.
-- Comunicação via Bluetooth Classic (SPP) — o cinto não precisa de cabo conectado ao PC, só de alimentação.
+- Comunicação realizada via Bluetooth Classic (SPP).
 - Aplicação Python que detecta a porta Bluetooth automaticamente e reconecta sozinha se a conexão cair.
 - Aplicação desktop para configurar quais teclas do PC disparam cada vibração e quais teclas são simuladas a partir dos toques e movimentos do cinto.
 
