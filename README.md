@@ -1,15 +1,15 @@
-# HaptFlelt
+# Cinto Háptico Flexível (HaptFlelt)
 
-> 🔧 **Protótipo funcional, em fase de aprimoramento.**
+> **Protótipo funcional, em fase de aprimoramento.**
 
 ## Sobre o projeto
 
-HaptFlelt é um cinto de feedback háptico capaz de detectar movimentos do corpo (inclinações/movimentos para frente, trás, cima, baixo, esquerda e direita) e toques em áreas sensíveis, comunicando tudo via Bluetooth com um computador. Além disso, recebe de volta comandos que acionam motores de vibração no cinto.
+O HaptFlelt é um cinto de feedback háptico capaz de detectar movimentos do corpo (inclinações/movimentos para frente, trás, cima, baixo, esquerda e direita) e toques em áreas sensíveis, comunicando tudo via Bluetooth com um computador. Além disso, recebe de volta comandos que acionam motores de vibração no cinto.
 
 O projeto tem duas partes:
 
-- **`haptflelt/`** — firmware que roda no ESP32 embarcado no cinto (sensores, vibração, Bluetooth).
-- **`haptflelt-bt/`** — aplicação Python que roda no PC e faz a ponte de comunicação com o cinto (daemon de terminal e aplicação desktop).
+- **`haptflelt/`**: firmware que roda no ESP32 embarcado no cinto (sensores, vibração, Bluetooth).
+- **`haptflelt-bt/`**: aplicação Python que roda no PC e faz a ponte de comunicação com o cinto (daemon de terminal e aplicação desktop).
 
 ## Funcionalidades
 
@@ -39,13 +39,4 @@ pio run --target upload
 cd haptflelt-bt
 pip install -r requirements.txt
 python gui_app.py   # aplicação desktop
-python main.py      # ou: daemon de terminal, com as setas do teclado
 ```
-
-## Status
-
-Protótipo funcional, em fase de aprimoramento.
-
-## Licença
-
-*A definir.*
