@@ -1,0 +1,4 @@
+pyserial
+keyboard
+pystray
+pillow

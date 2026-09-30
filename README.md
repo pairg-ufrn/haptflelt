@@ -1,6 +1,6 @@
 # HaptFlelt
 
-> 🚧 **Projeto em desenvolvimento.** Protótipo em fase de aprimoramento. A versão atual do código-fonte será divulgada em breve.
+> 🔧 **Protótipo funcional, em fase de aprimoramento.**
 
 ## Sobre o projeto
 
@@ -9,7 +9,7 @@ HaptFlelt é um cinto de feedback háptico capaz de detectar movimentos do corpo
 O projeto tem duas partes:
 
 - **`haptflelt/`** — firmware que roda no ESP32 embarcado no cinto (sensores, vibração, Bluetooth).
-- **`haptflelt-bt/`** — daemon Python que roda no PC e faz a ponte de comunicação com o cinto.
+- **`haptflelt-bt/`** — aplicação Python que roda no PC e faz a ponte de comunicação com o cinto (daemon de terminal e aplicação desktop).
 
 ## Funcionalidades
 
@@ -19,30 +19,32 @@ O projeto tem duas partes:
 - Feedback vibratório em motores posicionados no cinto, acionado por comandos recebidos do PC.
 - Indicadores visuais (LED RGB) e sonoros (buzzer) de status.
 - Comunicação via Bluetooth Classic (SPP) — o cinto não precisa de cabo conectado ao PC, só de alimentação.
-- Daemon Python que detecta a porta Bluetooth automaticamente e reconecta sozinho se a conexão cair.
+- Aplicação Python que detecta a porta Bluetooth automaticamente e reconecta sozinha se a conexão cair.
+- Aplicação desktop para configurar quais teclas do PC disparam cada vibração e quais teclas são simuladas a partir dos toques e movimentos do cinto.
 
 ## Hardware necessário
 
-ESP32, MPU6050, 4 botões/áreas de toque, 4 motores de vibração, LED RGB, buzzer.
+ESP32, MPU6050, 4 áreas de toque capacitivo, 4 motores de vibração, LED RGB, buzzer.
 
 ## Como rodar
 
 **Firmware** (via [PlatformIO](https://platformio.org/)):
 ```bash
-cd HaptFlelt
+cd haptflelt
 pio run --target upload
 ```
 
-**Daemon do PC** (Python 3, cinto já pareado via Bluetooth):
+**PC** (Python 3, cinto já pareado via Bluetooth):
 ```bash
 cd haptflelt-bt
 pip install -r requirements.txt
-python main.py
+python gui_app.py   # aplicação desktop
+python main.py      # ou: daemon de terminal, com as setas do teclado
 ```
 
 ## Status
 
-Protótipo funcional.
+Protótipo funcional, em fase de aprimoramento.
 
 ## Licença
 

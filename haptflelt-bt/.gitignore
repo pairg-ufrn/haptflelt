@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging (e.g. PyInstaller)
+build/
+dist/
+*.spec
+
+# User settings, created by the desktop app on "Save mappings"
+mappings.json
+
+# Editor
+.vscode/
